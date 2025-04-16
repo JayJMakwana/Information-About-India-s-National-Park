@@ -1,0 +1,122 @@
+<style>
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    text-align: center;
+    background-color: lightblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+    padding: 20px; /* Padding for breathing room */
+}
+
+p
+{
+font-size : 20px;
+}
+h1 {
+    color: blue;
+    font-size: 40px;
+    padding: 3px 0;
+    text-align: center;
+    margin: 15px 0 !important;
+}
+
+/* Navigation Bar */
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+li {
+    display: inline;
+    font-size: 20px;
+    margin-right: 10px; /* Spacing between items */
+}
+
+/* Flex Container for Blocks */
+.block-container {
+    display: flex;
+    flex-wrap: wrap; /* Allows wrapping to the next line */
+    justify-content: center; /* Center-aligns content */
+    gap: 20px; /* Spacing between blocks */
+}
+
+/* Block Styles */
+.block {
+    flex: 1 1 calc(33.333% - 20px); /* Ensures three blocks per row */
+    max-width: calc(33.333% - 20px); /* Adjusts block width */
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border: 2px solid black;
+    font-size: 20px;
+    padding: 130px 20px; /* Inner padding */
+    background-position: center;
+}
+.block a {
+    color: white;
+    text-decoration: none;
+}
+
+/* Specific Block Backgrounds */
+.blockgir {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9_NFXnilvDY6JDA2Lger5HkAOexbL7KMmMA&s);
+}
+.blockkaziranga {
+    background-image: url(https://www.kaziranga-national-park.com/blog/wp-content/uploads/2017/10/Kaziranga-National-Park-e1542092927457.jpg);
+}
+.blockjim {
+    background-image: url(https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWK-1laFEIHqatUU3jqAF-hc0neUno9zHIA&s);
+}
+.blockkanchen {
+    background-image: url(https://lh3.googleusercontent.com/pw/AP1GczNviH3DO6iYpMR0-Lexgakx3wS41kjPS_ngapc9dSy6Rj3gsZtJXQtHrtueeCfhxRERPqqNqWv1l55BkIUg47BQK_PiUBP8xkZzMXyGcLL-oHVwlZI=w2400);
+}
+.blockkanha {
+    background-image: url(https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1zS44xDGeKx0chq48dmRwX6d0DTz2rtMm4B07b90NbjABXAGCTlNkAcmn3onO-IEBgsZnJhP5VE23JkmW_Eu767KGPFtYNZszX7CevgC_viOvI1M66ZxC7DK04ZChJmYw38vszrauA2i_4bFdpC-KXvPZer-T1c8c4kyBTD1le44s7PL6A4NLUyhksg/w1200-h630-p-k-no-nu/Kanha%20National%20Park.jpg);
+}
+.blocktadoba {
+    background-image: url(https://eaglesafaris.in/wp-content/uploads/2023/03/tadoba.jpg);
+}
+</style>
+
+<body>
+<ul>
+  <li><a href="index.html">Home</a></li>
+  <li><a href="about.html">About Us</a></li>
+  <li><a href="feedback.html">Feedback</a></li>
+</ul>
+<br>
+<h1>National Parks Of India</h1>
+<p>National parks in India are International Union for Conservation of Nature (IUCN) category II protected areas. India's first national park was established in 1936, now known as Jim Corbett National Park, in Uttarakhand. In 1970, India had only five national parks. In 1972, India enacted the Wildlife Protection Act and Project Tiger in 1973 to safeguard the habitats of conservation reliant species and currently, there are 106 national parks in India. Further legislation strengthening protection for wildlife was introduced in the 1980s.</p>
+<p>There are 106 existing national parks in India covering an area of 44,402.95 km2 which is 1.35% of the geographical area of the country. In addition to the above, 75 other national parks covering an area of 16,608 km2 (6,412 sq mi) are proposed in the Protected Area Network Report. The network of parks will go up 176 after full implementation of the above report.</p>
+
+
+<div class="block-container">
+    <div class="block blockgir">
+        <p><a href="gir.html">Gir National Park</a></p>
+    </div>
+    <div class="block blockkaziranga">
+        <p><a href="kaziranga.html">Kaziranga National Park</a></p>
+    </div>
+    <div class="block blockjim">
+        <p><a href="jim_corbett.html">Jim Corbett National Park</a></p>
+    </div>
+    <div class="block blockkanchen">
+        <p><a href="kanchenjunga.html">Kanchenjunga National Park</a></p>
+    </div>
+    <div class="block blockkanha">
+        <p><a href="kanha.html">Kanha National Park</a></p>
+    </div>
+    <div class="block blocktadoba">
+        <p><a href="tadoba.html">Tadoba National Park</a></p>
+    </div>
+</div>
+</body>
+
