@@ -1,56 +1,174 @@
 <!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <title>National Parks of India</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background-image: url('https://images.unsplash.com/photo-1506744038136-46273834b3fb');
+            background-size: cover;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        .nav {
+            text-align: center;
+            padding: 15px;
+            background-color: rgba(255, 255, 255, 0.9);
+            border-bottom: 2px solid #ccc;
+        }
+
+        .nav a {
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: bold;
+            color: darkgreen;
+            font-size: 18px;
+        }
+
+        .container {
+            display: flex;
+            padding: 20px;
+        }
+
+        .sidebar {
+            width: 170px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateX(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .side-box {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 15px;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 10px;
+            transition: transform 0.3s ease;
+            opacity: 0;
+            animation: slideIn 0.7s forwards;
+            font-weight: bold;
+            text-shadow: 1px 1px 3px black;
+        }
+
+        .side-box:hover {
+            transform: scale(1.05);
+        }
+
+        /* Animation delays for box order */
+        .sidebar a:nth-child(1) { animation-delay: 0.2s; }
+        .sidebar a:nth-child(2) { animation-delay: 0.4s; }
+        .sidebar a:nth-child(3) { animation-delay: 0.6s; }
+        .sidebar a:nth-child(4) { animation-delay: 0.8s; }
+        .sidebar a:nth-child(5) { animation-delay: 1s; }
+        .sidebar a:nth-child(6) { animation-delay: 1.2s; }
+
+        .blockgir {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9_NFXnilvDY6JDA2Lger5HkAOexbL7KMmMA&s');
+        }
+
+        .blockkaziranga {
+            background-image: url('https://www.kaziranga-national-park.com/blog/wp-content/uploads/2017/10/Kaziranga-National-Park-e1542092927457.jpg');
+        }
+
+        .blockjim {
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSbWK-1laFEIHqatUU3jqAF-hc0neUno9zHIA&s');
+        }
+
+        .blockkanchen {
+            background-image: url('https://lh3.googleusercontent.com/pw/AP1GczNviH3DO6iYpMR0-Lexgakx3wS41kjPS_ngapc9dSy6Rj3gsZtJXQtHrtueeCfhxRERPqqNqWv1l55BkIUg47BQK_PiUBP8xkZzMXyGcLL-oHVwlZI=w2400');
+        }
+
+        .blockkanha {
+            background-image: url('https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1zS44xDGeKx0chq48dmRwX6d0DTz2rtMm4B07b90NbjABXAGCTlNkAcmn3onO-IEBgsZnJhP5VE23JkmW_Eu767KGPFtYNZszX7CevgC_viOvI1M66ZxC7DK04ZChJmYw38vszrauA2i_4bFdpC-KXvPZer-T1c8c4kyBTD1le44s7PL6A4NLUyhksg/w1200-h630-p-k-no-nu/Kanha%20National%20Park.jpg');
+        }
+
+        .blocktadoba {
+            background-image: url('https://eaglesafaris.in/wp-content/uploads/2023/03/tadoba.jpg');
+        }
+
+        .main-content {
+            flex: 1;
+            padding: 20px;
+            border: 2px solid #2196f3;
+            margin-left: 20px;
+            min-height: 200px;
+            background-color: rgba(255, 255, 255, 0.8);
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+        }
+
+        .main-content h2 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+
+        .main-content p {
+            font-size: 17px;
+            line-height: 1.6;
+            color: #333;
+            margin-bottom: 10px;
+        }
+
+        .main-content ul {
+            padding-left: 20px;
+            margin-bottom: 10px;
+        }
+
+        .main-content ul li {
+            margin-bottom: 5px;
+        }
+
+        .content-box {
+            display: none;
+        }
+
+        .content-box:target {
+            display: block;
+        }
+    </style>
 </head>
-<style>
-body {background-color: lightblue;}
-h1{
-    color: black;
-    text-align:center;
-    font-size: 40px;
-       
-}
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align:center;
-}
-.row {
-  display: flex;
-}
-
-.column {
-  flex: 50%;
-  padding: 10px;
-}
-img{
-  margin-left:auto;
-  margin-right:auto;
-  display:block;
-  width:50%;
-  height:50%;
-}
-
-li {
-  display: inline;
-  font-size:20px;
-  text-align:center;
-}
-
-p{
-    font-size:22px;
-    text-align : left;
-    
-    }
-</style>
 <body>
-<ul>
-  <li><a href="index.html">Home</a></li>&nbsp;
-  <li><a href="about.html">About Us</a></li>&nbsp;
-  <li><a href="feedback.html">Feedback</a></li>
-</ul>
 
-<h1>Kanha National Park</h1>
+    <div class="nav">
+        <a href="index.html">Home</a>
+        
+        <a href="feedback.html">Feedback</a>
+    </div>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="gir.html" class="side-box blockgir">Gir</a>
+            <a href="kaziranga.html"  class="side-box blockkaziranga">Kaziranga</a>
+            <a href="jim_corbett.html"  class="side-box blockjim">Jim Corbett</a>
+            <a href="kanchenjunga.html"  class="side-box blockkanchen">Kanchenjunga</a>
+            <a href="kanha.html" class="side-box blockkanha">Kanha</a>
+            <a href="tadoba.html" class="side-box blocktadoba">Tadoba</a>
+        </div>
+
+        <div class="main-content">
+           <h1>Kanha National Park</h1>
 
 <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg1zS44xDGeKx0chq48dmRwX6d0DTz2rtMm4B07b90NbjABXAGCTlNkAcmn3onO-IEBgsZnJhP5VE23JkmW_Eu767KGPFtYNZszX7CevgC_viOvI1M66ZxC7DK04ZChJmYw38vszrauA2i_4bFdpC-KXvPZer-T1c8c4kyBTD1le44s7PL6A4NLUyhksg/w1200-h630-p-k-no-nu/Kanha%20National%20Park.jpg" /> </a>
 <p>
@@ -88,6 +206,15 @@ Kanha Tiger Reserve encompasses an area of 940 km2 (360 sq mi) in the two distri
 <p>
 Kanha National Park
 <a href="https://www.kanha-national-park.com/birding-in-kanha.html">Kanha National Park. Archived from the original on 28 July 2019. Retrieved 26 July 2019.</p>
+
+            <div id="gir.html" class="content-box">Gir National Park is located in Gujarat and is home to Asiatic Lions.</div>
+            <div id="kaziranga.html" class="content-box">Kaziranga is in Assam and famous for the one-horned rhinoceros.</div>
+            <div id="jim_corbett.html" class="content-box">Jim Corbett in Uttarakhand was India’s first National Park.</div>
+            <div id="kanchenjunga.html" class="content-box">Kanchenjunga in Sikkim is known for alpine wildlife and snow leopards.</div>
+            <div id="kanha.html" class="content-box">Kanha National Park inspired Rudyard Kipling’s Jungle Book.</div>
+            <div id="tadoba.html" class="content-box">Tadoba is a dense forest in Maharashtra, home to many tigers.</div>
+        </div>
+    </div>
 </body>
 </html>
 
